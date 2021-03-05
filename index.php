@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bird Feeder - Surveillance Camera</title>
+        <title>Smart Bird Feeder</title>
     </head>
     <body>
         <h1>Raspberry Pi - Surveillance Camera</h1>
