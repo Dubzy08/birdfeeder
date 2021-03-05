@@ -5,6 +5,6 @@
     </head>
     <body>
         <h1>Raspberry Pi - Surveillance Camera</h1>
-        <img src="stream.mjpg" width="640" height="480">
+        <iframe src="vids/test.mp4" title="Live Stream"></iframe>
     </body>
 </html>
