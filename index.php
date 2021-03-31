@@ -27,7 +27,8 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-
+        ?>
+        <?php
             echo "<br><br>Year:" . $year . " Month:" . $month . " Day:" . $day . " Hour:" . $hour . " Minute:" . $minute;
         ?>
     </body>
