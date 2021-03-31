@@ -30,5 +30,8 @@
         ?>
         <br><br>
         <h2>Pictures Captured by the Feeder<h2>
+        <?php
+            echo "<br><br>Year:" . $year . " Month:" . $month . " Day:" . $day . " Hour:" . $hour . " Minute:" . $minute;
+        ?>
     </body>
 </html>
