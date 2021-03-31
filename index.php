@@ -28,8 +28,7 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
         ?>
-        <?php
-            echo "<br><br>Year:" . $year . " Month:" . $month . " Day:" . $day . " Hour:" . $hour . " Minute:" . $minute;
-        ?>
+        <br><br>
+        <h2>Pictures Captured by the Feeder<h2>
     </body>
 </html>
