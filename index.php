@@ -36,8 +36,8 @@
             $x = $day;
 
             while($x>0&&$y<30){
-
-               $y++; 
+                echo '<img src="https://cdn2.jomashop.com/media/catalog/product/c/i/citizen-cto-men_s-watch-bu4020-01l.jpg"';
+                $y++; 
             };
         ?>
     </body>
