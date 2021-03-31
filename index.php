@@ -8,6 +8,12 @@
         <iframe width=600 height=350 src="vids/test.mp4" title="Live Stream"></iframe>
         <?php
             //define variables
+            //for sql connection
+            $servername = "localhost";
+            $username = "jeremy";
+            $password = "Password01";
+            $dbname = "birdfeeder";
+            //for database information
             $year = date("Y");
             $month = date("m");
             $day = date("d");
