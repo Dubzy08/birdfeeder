@@ -19,6 +19,8 @@
             $day = date("d");
             $hour = date("H");
             $minute = date("i");
+            //other variables
+            $y = 0;
 
             //create connection to mysql
             $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -29,9 +31,14 @@
             }
         ?>
         <br><br>
-        <h2>Pictures Captured by the Feeder<h2>
+        <h2>Pictures Captured by the Feeder</h2>
         <?php
-            echo "<br><br>Year:" . $year . " Month:" . $month . " Day:" . $day . " Hour:" . $hour . " Minute:" . $minute;
+            $x = $day;
+
+            while($x>0&&$y<30){
+                
+                
+            };
         ?>
     </body>
 </html>
