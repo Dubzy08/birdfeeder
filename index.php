@@ -32,7 +32,7 @@
             }
 
             echo '<br><br>';
-            echo '<h2>Pictures Captured by the Feeder</h2>';
+            echo '<h2>Latest Captures of the Feeder</h2>';
 
             if(mysqli_query($conn,$sql))
 
