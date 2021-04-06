@@ -34,7 +34,11 @@
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
 
-            if(mysqli_query($conn,$sql))
+            //select data and query
+            $sql = "SELECT * FROM birds";
+            $bird = mysqli_query($conn, $sql);
+
+            //if(mysqli_query($conn,$sql))
 
             while($x>0&&$y<20){
                 //$image = "image/bird.jpg";
