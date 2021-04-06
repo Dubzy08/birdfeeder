@@ -37,7 +37,7 @@
 
             while($x>0&&$y<30){
 
-                echo '<img src="/var/www/html/birdfeeder/images/bird.jpg" width="250"';
+                echo '<img src="/var/www/html/birdfeeder/images/bird.jpg"'; //width="250"';
                 echo "<br>";
                 $y++; 
             };
