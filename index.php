@@ -29,14 +29,15 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-        ?>
-        <br><br>
-        <h2>Pictures Captured by the Feeder</h2>
-        <?php
+
+            echo '<br><br>';
+            echo '<h2>Pictures Captured by the Feeder</h2>';
+
             $x = $day;
 
             while($x>0&&$y<30){
-                echo '<img src="https://cdn2.jomashop.com/media/catalog/product/c/i/citizen-cto-men_s-watch-bu4020-01l.jpg" width="250"';
+
+                echo '<img src="image/bird.png width="250"';
                 echo "<br>";
                 $y++; 
             };
