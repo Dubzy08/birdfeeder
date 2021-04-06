@@ -37,6 +37,8 @@
             //select data and query
             $sql = "SELECT * FROM birds";
             $bird = mysqli_query($conn, $sql);
+            $last_id = mysqli_insert_id($conn);
+            echo "Last inserted ID is:" , $last_id;
 
             //if(mysqli_query($conn,$sql))
 
