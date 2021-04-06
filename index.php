@@ -30,15 +30,17 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-
-            echo '<br><br>';
-            echo '<h2>Latest Captures of the Feeder</h2>';
-
+            
             //select data and query
             $sql = "SELECT * FROM birds";
             $bird = mysqli_query($conn, $sql);
             $last_id = mysqli_insert_id($conn);
-            echo "Last inserted ID is:" , $last_id;
+
+            echo "Last inserted ID is:" , $last_id , "<br><br>";
+            echo '<br><br>';
+            echo '<h2>Latest Captures of the Feeder</h2>';
+
+            
 
             //if(mysqli_query($conn,$sql))
 
