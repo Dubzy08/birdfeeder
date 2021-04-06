@@ -37,7 +37,7 @@
             if(mysqli_query($conn,$sql))
 
             while($x>0&&$y<20){
-                $image = "image/bird.jpg";
+                //$image = "image/bird.jpg";
                 //if($image)
                     echo '<img src="images/bird.jpg" width="250"';
                 echo "<br>";
