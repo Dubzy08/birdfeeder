@@ -33,11 +33,11 @@
 
             //select data and query
             $sql = "SELECT * FROM birds";
-            $sql = "SELECT last_insert_id()";
-            //$bird = mysqli_query($conn, $sql);
+            $last_id = mysqli_insert_id($conn);
+            $bird = mysqli_query($conn, $sql);
            
 
-            echo "<br><br>Last inserted ID is:" , $sql , "<br><br>";
+            echo "<br><br>Last inserted ID is:" , $last_id , "<br><br>";
 
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
