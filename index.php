@@ -38,7 +38,7 @@
 
             while($x>0&&$y<20){
                 $image = "image/bird.jpg";
-                if($image)
+                //if($image)
                     echo '<img src="images/bird.jpg" width="250"';
                 echo "<br>";
                 $y++; 
