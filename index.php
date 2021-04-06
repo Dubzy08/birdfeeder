@@ -21,6 +21,7 @@
             $minute = date("i");
             //other variables
             $y = 0;
+            $x = $day;
 
             //create connection to mysql
             $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -33,12 +34,13 @@
             echo '<br><br>';
             echo '<h2>Pictures Captured by the Feeder</h2>';
 
-            $x = $day;
+            if(mysqli_query($conn,$sql))
 
-            while($x>0&&$y<30){
-
-                echo '<img src="images/bird.jpg" width="250"';
-                echo "<br><br>";
+            while($x>0&&$y<20){
+                $image = "image/bird.jpg";
+                if($image)
+                    echo '<img src="images/bird.jpg" width="250"';
+                echo "<br>";
                 $y++; 
             };
         ?>
