@@ -34,7 +34,7 @@
             //select data and query
             $sql = "SELECT * FROM birds";
             $bird = mysqli_query($conn, $sql);
-            $update = mysqli_query($conn, "UPDATE birds SET Year='2002' WHERE ID='2'");
+            $update = mysqli_query($conn, "UPDATE birds SET Year='2001' WHERE ID='2'");
             $last_id = mysqli_insert_id($conn);
 
             echo "<br><br>Last inserted ID is:" , $last_id , "<br><br>";
