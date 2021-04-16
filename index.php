@@ -32,14 +32,13 @@
             }
 
             //select data and query
-            //$sql = "SELECT * FROM birds";
-            $sql = "INSERT INTO birds (Year, Month, Minute) VALUES ('2021', '04', '11')";
+            $sql = "SELECT * FROM birds";
+            //$sql = "INSERT INTO birds (Year, Month, Minute) VALUES ('2021', '04', '11')";
             $bird = mysqli_query($conn, $sql);
-            $last_id = mysqli_insert_id($conn);
+            $sql = "SELECT max(id) FROM tablename";
+            $result = mysqli_query($conn, $sql);
 
-            $update = mysqli_query($conn, "UPDATE birds SET Year='2001' WHERE ID='2'");
-            
-            echo "<br><br>Last inserted ID is:" , $last_id , "<br><br>";
+            echo "<br><br>Last inserted ID is:" , $result , "<br><br>";
 
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
