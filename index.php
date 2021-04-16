@@ -33,13 +33,13 @@
 
             //select data and query
             $sql = "SELECT * FROM birds";
-            //$sql = "INSERT INTO birds (Year, Month, Minute) VALUES ('2021', '04', '11')";
             $bird = mysqli_query($conn, $sql);
+
+            //get last row ID from brids table
             $result = mysqli_query($conn, "SELECT MAX(ID) AS last_id FROM birds");
             $row = mysqli_fetch_array($result);
-            echo $row["last_id"];
 
-            echo "<br><br>Last inserted ID is:" , $row["last_id"] , "<br><br>";
+            echo "<br><br>Last inserted ID is: " , $row["last_id"] , "<br><br>";
 
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
@@ -48,7 +48,7 @@
 
             //if(mysqli_query($conn,$sql))
 
-            while($x>0&&$y<20){
+            while($x>0&&$y<16){
                 //$image = "image/bird.jpg";
                 //if($image)
                     echo '<img src="images/bird.jpg" width="250"';
