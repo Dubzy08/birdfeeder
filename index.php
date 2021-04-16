@@ -35,9 +35,9 @@
             $sql = "SELECT * FROM birds";
             //$sql = "INSERT INTO birds (Year, Month, Minute) VALUES ('2021', '04', '11')";
             $bird = mysqli_query($conn, $sql);
-            $sql = "SELECT max(ID) AS last_id FROM tablename";
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_assoc($result);
+            $result = mysqli_query($conn, "SELECT MAX(ID) AS last_id FROM birds");
+            $row = mysqli_fetch_array($result);
+            echo $row["last_id"];
 
             echo "<br><br>Last inserted ID is:" , $row["last_id"] , "<br><br>";
 
