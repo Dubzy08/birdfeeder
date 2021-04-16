@@ -33,11 +33,10 @@
 
             //select data and query
             $sql = "SELECT * FROM birds";
-            $last_id = "SELECT MAX(ID) AS ID FROM birds";
             $bird = mysqli_query($conn, $sql);
-           
+            $last_id = mysqli_insert_id($conn);
 
-            echo "<br><br>Last inserted ID is:" , $last_id , "<br><br>";
+            echo "<br><br>Last inserted ID is:" , mysqli_insert_id($conn) , "<br><br>";
 
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
