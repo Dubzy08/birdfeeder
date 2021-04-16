@@ -43,7 +43,7 @@
 
             $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
             $row = mysqli_fetch_assoc($result);
-            echo "<br>The picture associated with that ID is" . $row["Picture"];
+            echo "<br>The picture associated with that ID is: " . $row["Picture"];
 
             echo '<h2>Latest Captures of the Feeder</h2>';
 
