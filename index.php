@@ -38,7 +38,7 @@
             $last_id = mysqli_insert_id($conn);
 
             echo "<br><br>Last inserted ID is:" , mysqli_insert_id($conn) , "<br><br>";
-            echo "<br><br>Last inserted ID is:" , $test , "<br><br>";
+            echo "<br><br>Last inserted ID is:" , $sql , "<br><br>";
 
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
