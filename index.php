@@ -37,7 +37,7 @@
             $update = mysqli_query($conn, "UPDATE birds SET Year='2002' WHERE ID='2'");
             $last_id = mysqli_insert_id($conn);
 
-            echo "<br><br>Last inserted ID is:" , mysqli_insert_id($conn) , "<br><br>";
+            echo "<br><br>Last inserted ID is:" , $last_id , "<br><br>";
 
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
