@@ -32,7 +32,8 @@
             }
 
             //select data and query
-            $sql = "SELECT * FROM birds";
+            //$sql = "SELECT * FROM birds";
+            $sql = "INSERT INTO birds ('Year', 'Month', Picture) VALUES ('2021', '04', 'testimg.jpg'";
             $bird = mysqli_query($conn, $sql);
             $update = mysqli_query($conn, "UPDATE birds SET Year='2001' WHERE ID='2'");
             $last_id = mysqli_insert_id($conn);
