@@ -41,17 +41,22 @@
 
             echo "<br><br>The last ID found is: " , $id , "<br><br>";
 
+            $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
+            $row = mysqli_fetch_assoc($result);
+            echo "<br>The picture associated with that ID is" . $row["Picture"];
+
             echo '<h2>Latest Captures of the Feeder</h2>';
 
             if(mysqli_query($conn,$sql)){
-                while($y<16){
-                    $result = mysqli_query($conn, "SELECT ID, Picture from ");
+                while($id>0&&$y<16){
+                    $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
                     //$picture = 
                     //$image = "image/bird.jpg";
                     //if($image)
                     echo '<img src="images/bird.jpg" width="250"';
                     echo "<br>";
-                    $y++; 
+                    $y++;
+                    $id--;
                 };
             }
         ?>
