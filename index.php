@@ -37,8 +37,9 @@
             $bird = mysqli_query($conn, $sql);
             $sql = "SELECT max(ID) AS last_id FROM tablename";
             $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
 
-            echo "<br><br>Last inserted ID is:" , $result , "<br><br>";
+            echo "<br><br>Last inserted ID is:" , $row["last_id"] , "<br><br>";
 
             echo '<br><br>';
             echo '<h2>Latest Captures of the Feeder</h2>';
