@@ -39,7 +39,7 @@
             $row = mysqli_fetch_array($result);
             $id = $row["last_id"];
 
-            echo "<br><br>Last inserted ID is: " , $id] , "<br><br>";
+            echo "<br><br>The last ID found is: " , $id , "<br><br>";
 
             echo '<h2>Latest Captures of the Feeder</h2>';
 
