@@ -53,7 +53,7 @@
                     $image = $row = mysqli_fetch_assoc($result);
                     //$image = "image/bird.jpg";
                     //if($image)
-                    echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
+                    //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
                     echo '<img src=' . $row["Picture"] . ' width="250"';
                     echo "<br>";
                     $y++;
