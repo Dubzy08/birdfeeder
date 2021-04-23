@@ -30,9 +30,17 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            //select data and query
-            $sql = "SELECT * FROM birds";
-            $bird = mysqli_query($conn, $sql);
+            //select get the last row ID from climat table
+            $sql = "SELECT MAX(ID) AS last_climat FROM climat";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_array($result);
+            $id = $row["last_climat"];
+
+            //getting information associated to that ID
+            $result = mysqli_query($conn, "SELECT ID, Temp, Humid, Res FROM cimat where ID=$id");
+            echo "<br> Current Temperature: " . $row["Temp"];
+            echo "  Current Humidity Level: " . $row["Hum"];
+            echo "<br> Reservoir Level: " . $row["Res"];
 
             //get last row ID from brids table
             $result = mysqli_query($conn, "SELECT MAX(ID) AS last_id FROM birds");
@@ -40,7 +48,8 @@
             $id = $row["last_id"];
 
             echo "<br><br>The last ID found is: " , $id , "<br><br>";
-
+            
+            //getting the file located in Picture column assicated with the last ID
             $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
             $row = mysqli_fetch_assoc($result);
             echo "<br>The picture associated with that ID is: " . $row["Picture"];
