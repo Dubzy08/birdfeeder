@@ -2,6 +2,11 @@
 <html>
     <head>
         <title>Smart Bird Feeder</title>
+        <style>
+            img {
+                border: 4px solid #000;
+            }
+        </style>
     </head>
     <body>
         <h1>Bird Feeder Live Stream</h1>
