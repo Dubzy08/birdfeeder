@@ -9,7 +9,7 @@
         </style>
     </head>
     <body>
-        <h1>Bird Feeder Live Stream</h1>
+        <h1>Bird Feeder Live Monitor</h1>
         <iframe width=600 height=350 src="vids/test.mp4" title="Live Stream"></iframe>
         <?php
             //define variables
@@ -42,7 +42,7 @@
             $id = $row["last_climat"];
 
             //getting information associated to that ID
-            echo "<br> The last ID of the climat table is: " . $id;
+            //echo "<br> The last ID of the climat table is: " . $id;
             $result = mysqli_query($conn, "SELECT * FROM climat where ID=$id");
             $row = mysqli_fetch_assoc($result);
 
@@ -55,13 +55,13 @@
             $row = mysqli_fetch_array($result);
             $id = $row["last_id"];
 
-            echo "<br><br>The last ID found is: " , $id , "<br><br>";
+            //echo "<br><br>The last ID found is: " , $id , "<br><br>";
             
             //getting the file located in Picture column assicated with the last ID
             $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
             $row = mysqli_fetch_assoc($result);
 
-            echo "<br>The picture associated with that ID is: " . $row["Picture"];
+            //echo "<br>The picture associated with that ID is: " . $row["Picture"];
 
             echo '<h2>Latest Captures of the Feeder</h2>';
 
