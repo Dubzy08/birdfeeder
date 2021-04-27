@@ -42,6 +42,7 @@
             $id = $row["last_climat"];
 
             //getting information associated to that ID
+            echo "<br> The last ID of the climat table is" . $id;
             $result = mysqli_query($conn, "SELECT ID, Temp, Humid, Res FROM cimat where ID=$id");
             echo "<br> Current Temperature: " . $row["Temp"];
             echo "  Current Humidity Level: " . $row["Hum"];
@@ -69,6 +70,7 @@
                     //if($image)
                     //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
                     echo '<img src=' . $row["Picture"] . ' width="250"';
+                    echo " ";
                     echo "<br>";
                     $y++;
                     $id--;
