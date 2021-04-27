@@ -43,7 +43,7 @@
 
             //getting information associated to that ID
             echo "<br> The last ID of the climat table is: " . $id;
-            $result = mysqli_query($conn, "SELECT ID, Temp FROM climat where ID=$id");  //, Hum, Res
+            $result = mysqli_query($conn, "SELECT * FROM climat where ID=$id");
             $row = mysqli_fetch_assoc($result);
             echo $row;
             echo "<br> Current Temperature: " . $row["Temp"];
