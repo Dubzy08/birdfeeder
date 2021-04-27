@@ -45,10 +45,10 @@
             echo "<br> The last ID of the climat table is: " . $id;
             $result = mysqli_query($conn, "SELECT * FROM climat where ID=$id");
             $row = mysqli_fetch_assoc($result);
-            echo $row["Humid"];
-            echo "<br> Temperature: " . $row["Temp"];
-            echo "  Humidity Level: " . $row["Humid"];
-            echo "<br> Reservoir Level: " . $row["Res"];
+
+            echo "<br> Temperature: " . $row["Temp"] . "°C";
+            echo "  Humidity Level: " . $row["Humid"] . "%";
+            echo "<br> Reservoir Level: " . $row["Res"] . "%";
 
             //get last row ID from brids table
             $result = mysqli_query($conn, "SELECT MAX(ID) AS last_id FROM birds");
