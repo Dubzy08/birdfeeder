@@ -45,9 +45,9 @@
             echo "<br> The last ID of the climat table is: " . $id;
             $result = mysqli_query($conn, "SELECT * FROM climat where ID=$id");
             $row = mysqli_fetch_assoc($result);
-            echo $row;
-            echo "<br> Current Temperature: " . $row["Temp"];
-            echo "  Current Humidity Level: " . $row["Hum"];
+            echo $row["Humid"];
+            echo "<br> Temperature: " . $row["Temp"];
+            echo "  Humidity Level: " . $row["Humid"];
             echo "<br> Reservoir Level: " . $row["Res"];
 
             //get last row ID from brids table
