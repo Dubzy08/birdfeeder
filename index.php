@@ -42,8 +42,9 @@
             $id = $row["last_climat"];
 
             //getting information associated to that ID
-            echo "<br> The last ID of the climat table is" . $id;
+            echo "<br> The last ID of the climat table is: " . $id;
             $result = mysqli_query($conn, "SELECT ID, Temp, Humid, Res FROM cimat where ID=$id");
+            $row = mysqli_fetch_assoc($result);
             echo "<br> Current Temperature: " . $row["Temp"];
             echo "  Current Humidity Level: " . $row["Hum"];
             echo "<br> Reservoir Level: " . $row["Res"];
