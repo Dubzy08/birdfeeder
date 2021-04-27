@@ -45,6 +45,7 @@
             echo "<br> The last ID of the climat table is: " . $id;
             $result = mysqli_query($conn, "SELECT ID, Temp FROM cimat where ID=$id");
             $row = mysqli_fetch_assoc($result);
+            echo $row;
             echo $row["Temp"];
             echo "<br> Current Temperature: " . $row["Temp"];
             //echo "  Current Humidity Level: " . $row["Hum"];
@@ -60,7 +61,7 @@
             //getting the file located in Picture column assicated with the last ID
             $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
             $row = mysqli_fetch_assoc($result);
-            echo $row;
+
             echo "<br>The picture associated with that ID is: " . $row["Picture"];
 
             echo '<h2>Latest Captures of the Feeder</h2>';
