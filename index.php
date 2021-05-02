@@ -47,6 +47,7 @@
         <style>
             img {
                 border: 4px solid #000;
+                border-spacing: 1px;
             }
             .content {
                 max-width: 1450px;
@@ -56,7 +57,7 @@
                 text-align: center;
             }
         </style>
-        
+
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
         <div class = "center">
