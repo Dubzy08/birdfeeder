@@ -55,7 +55,7 @@
         </style>
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
-        <div>
+        <div class = "content">
             <h1>Bird Feeder Live Monitor</h1>
             
             <div class="container-fluid text-center liveimage">
