@@ -49,7 +49,7 @@
                 border: 4px solid #000;
             }
             .content {
-                max-width: 900px;
+                max-width: 950px;
                 margin: auto;
             }
         </style>
