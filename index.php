@@ -62,7 +62,7 @@
         <div class = "center">
             <h1>Bird Feeder Live Monitor</h1>
             
-            <div class="container-fluid text-center liveimage">
+            <div>
                 <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
         </div>
         <div class = "content">
