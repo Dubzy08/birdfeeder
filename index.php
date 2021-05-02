@@ -55,6 +55,9 @@
             .center {
                 text-align: center;
             }
+            .picimg {
+                margin-left: 3px;
+            }
         </style>
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
@@ -126,7 +129,7 @@
                         //$image = "image/bird.jpg";
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
-                        echo '<img src=' . $row["Picture"] . ' width="350"';
+                        echo '<div class = "picimg";><img src=' . $row["Picture"] . ' width="350" </div>';
                         echo " ";
                         echo "<br>";
                         $y++;
