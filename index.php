@@ -127,7 +127,7 @@
                         //$image = "image/bird.jpg";
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
-                        echo '<img src=' . $row["Picture"] . ' width="350"';
+                        echo '<div class = "img"> <img src=' . $row["Picture"] . ' width="350" </div>';
                         echo " ";
                         echo "<br>";
                         $y++;
