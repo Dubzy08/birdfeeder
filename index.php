@@ -60,7 +60,7 @@
             
             <div class="container-fluid text-center liveimage">
                 <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
-            </div>
+            
 
             <?php
                 //define variables
