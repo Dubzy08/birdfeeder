@@ -49,19 +49,19 @@
                 border: 4px solid #000;
             }
             .content {
-                max-width: 500px;
+                max-width: 50px;
                 margin: auto;
             }
         </style>
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
-        <div class = "content">
+        <div>
             <h1>Bird Feeder Live Monitor</h1>
             
             <div class="container-fluid text-center liveimage">
                 <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
-            
-
+        </div>
+        <div class = "content">
             <?php
                 //define variables
                 //for sql connection
