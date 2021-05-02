@@ -45,17 +45,21 @@
         <!-- <link rel="stylesheet" href="css/style_minified.css" /> --> <!-- this is for centering the video -->
         <script src="js/script.js"></script> <!-- this script is used for the live video feed -->
         <style>
-            img {
+            .img {
                 border: 4px solid #000;
             }
             .content {
-                /* max-width: 1450px; */
+                max-width: 1450px;
                 margin: auto;
+            }
+            .center {
+                margin: auto;
+                width: 50%;
             }
         </style>
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
-        <div class = "content">
+        <div class = "center">
             <h1>Bird Feeder Live Monitor</h1>
             
             <div class="container-fluid text-center liveimage">
