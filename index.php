@@ -45,7 +45,7 @@
         <!-- <link rel="stylesheet" href="css/style_minified.css" /> --> <!-- this is for centering the video -->
         <script src="js/script.js"></script> <!-- this script is used for the live video feed -->
         <style>
-            .img {
+            img {
                 border: 4px solid #000;
             }
             .content {
@@ -62,7 +62,7 @@
         <div class = "center">
             <h1>Bird Feeder Live Monitor</h1>
             
-            <div class="container-fluid text-center liveimage img">
+            <div class="container-fluid text-center liveimage">
                 <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
         </div>
         <div class = "content">
@@ -127,7 +127,7 @@
                         //$image = "image/bird.jpg";
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
-                        echo '<div class = "img"> <img src=' . $row["Picture"] . ' width="350" </div>';
+                        echo '<img src=' . $row["Picture"] . ' width="350"';
                         echo " ";
                         echo "<br>";
                         $y++;
