@@ -56,7 +56,7 @@
                 text-align: center;
             }
             .picimg {
-                margin-left: 3px;
+                margin-right: 3px;
             }
         </style>
     </head>
