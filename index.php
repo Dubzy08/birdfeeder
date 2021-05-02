@@ -47,6 +47,7 @@
         <style>
             img {
                 border: 4px solid #000;
+                border-collapse: separate;
                 border-spacing: 4px;
             }
             .content {
