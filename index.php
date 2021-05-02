@@ -48,83 +48,89 @@
             img {
                 border: 4px solid #000;
             }
+            .content {
+                max-width: 500px;
+                margin: auto;
+            }
         </style>
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
-        <h1>Bird Feeder Live Monitor</h1>
-        
-        <div class="container-fluid text-center liveimage">
-            <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
-        </div>
-
-        <?php
-            //define variables
-            //for sql connection
-            $servername = "localhost";
-            $username = "jeremy";
-            $password = "Password01";
-            $dbname = "birdfeeder";
-            //for database information
-            $year = date("Y");
-            $month = date("m");
-            $day = date("d");
-            $hour = date("H");
-            $minute = date("i");
-            //other variables
-            $y = 0;
-
-            //create connection to mysql
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-            //check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-
-            //get the last row ID from climat table
-            $sql = "SELECT MAX(ID) AS last_climat FROM climat";
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_array($result);
-            $id = $row["last_climat"];
-
-            //getting information associated to that ID
-            //echo "<br> The last ID of the climat table is: " . $id;
-            $result = mysqli_query($conn, "SELECT * FROM climat where ID=$id");
-            $row = mysqli_fetch_assoc($result);
-
-            echo "<br><br> Temperature: " . $row["Temp"] . "°C";
-            echo "<br> Humidity Level: " . $row["Humid"] . "%";
-            echo "<br> Reservoir Level: " . $row["Res"] . "%";
-
-            //get last row ID from brids table
-            $result = mysqli_query($conn, "SELECT MAX(ID) AS last_id FROM birds");
-            $row = mysqli_fetch_array($result);
-            $id = $row["last_id"];
-
-            //echo "<br><br>The last ID found is: " , $id , "<br><br>";
+        <div class = "content">
+            <h1>Bird Feeder Live Monitor</h1>
             
-            //getting the file located in Picture column assicated with the last ID
-            $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
-            $row = mysqli_fetch_assoc($result);
+            <div class="container-fluid text-center liveimage">
+                <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
+            </div>
 
-            //echo "<br>The picture associated with that ID is: " . $row["Picture"];
+            <?php
+                //define variables
+                //for sql connection
+                $servername = "localhost";
+                $username = "jeremy";
+                $password = "Password01";
+                $dbname = "birdfeeder";
+                //for database information
+                $year = date("Y");
+                $month = date("m");
+                $day = date("d");
+                $hour = date("H");
+                $minute = date("i");
+                //other variables
+                $y = 0;
 
-            echo '<h2>Latest Captures of the Feeder</h2>';
+                //create connection to mysql
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-            if(mysqli_query($conn,$sql)){
-                while($id>6&&$y<16){
-                    $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
-                    $row = mysqli_fetch_assoc($result);
-                    //$image = "image/bird.jpg";
-                    //if($image)
-                    //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
-                    echo '<img src=' . $row["Picture"] . ' width="250"';
-                    echo " ";
-                    echo "<br>";
-                    $y++;
-                    $id--;
-                };
-            }
-        ?>
+                //check connection
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+
+                //get the last row ID from climat table
+                $sql = "SELECT MAX(ID) AS last_climat FROM climat";
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_array($result);
+                $id = $row["last_climat"];
+
+                //getting information associated to that ID
+                //echo "<br> The last ID of the climat table is: " . $id;
+                $result = mysqli_query($conn, "SELECT * FROM climat where ID=$id");
+                $row = mysqli_fetch_assoc($result);
+
+                echo "<br><br> Temperature: " . $row["Temp"] . "°C";
+                echo "<br> Humidity Level: " . $row["Humid"] . "%";
+                echo "<br> Reservoir Level: " . $row["Res"] . "%";
+
+                //get last row ID from brids table
+                $result = mysqli_query($conn, "SELECT MAX(ID) AS last_id FROM birds");
+                $row = mysqli_fetch_array($result);
+                $id = $row["last_id"];
+
+                //echo "<br><br>The last ID found is: " , $id , "<br><br>";
+                
+                //getting the file located in Picture column assicated with the last ID
+                $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
+                $row = mysqli_fetch_assoc($result);
+
+                //echo "<br>The picture associated with that ID is: " . $row["Picture"];
+
+                echo '<h2>Latest Captures of the Feeder</h2>';
+
+                if(mysqli_query($conn,$sql)){
+                    while($id>6&&$y<16){
+                        $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
+                        $row = mysqli_fetch_assoc($result);
+                        //$image = "image/bird.jpg";
+                        //if($image)
+                        //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
+                        echo '<img src=' . $row["Picture"] . ' width="250"';
+                        echo " ";
+                        echo "<br>";
+                        $y++;
+                        $id--;
+                    };
+                }
+            ?>
+        </div>
     </body>
 </html>
