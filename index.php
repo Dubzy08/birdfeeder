@@ -47,6 +47,7 @@
         <style>
             img {
                 border: 4px solid #000;
+                border-spacing: 4px;
             }
             .content {
                 max-width: 1450px;
@@ -56,7 +57,7 @@
                 text-align: center;
             }
             .picimg {
-                margin-right: 3px;
+                margin-right: 4px;
             }
         </style>
     </head>
@@ -129,7 +130,7 @@
                         //$image = "image/bird.jpg";
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
-                        echo '<div class = "picimg";><img src=' . $row["Picture"] . ' width="350" </div>';
+                        echo '<img src=' . $row["Picture"] . ' width="350"';
                         //echo "<br>";
                         $y++;
                         $id--;
