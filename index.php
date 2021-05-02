@@ -53,14 +53,13 @@
                 margin: auto;
             }
             .center {
-                margin: auto;
-                width: 50%;
+                text-align: center;
             }
         </style>
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
         <div class = "center">
-            <h1>Bird Feeder Live Monitor</h1>
+            <h1 style="font-size:60px;">Bird Feeder Live Monitor</h1>
             
             <div>
                 <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
