@@ -47,7 +47,6 @@
         <style>
             img {
                 border: 4px solid #000;
-                /*border-spacing: 4px;*/
             }
             .content {
                 max-width: 1450px;
@@ -56,10 +55,8 @@
             .center {
                 text-align: center;
             }
-            .picimg {
-                margin-right: 4px;
-            }
         </style>
+        
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
         <div class = "center">
@@ -131,7 +128,8 @@
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
                         echo '<img src=' . $row["Picture"] . ' width="350"';
-                        //echo "<br>";
+                        echo " ";
+                        echo "<br>";
                         $y++;
                         $id--;
                     };
