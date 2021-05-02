@@ -47,8 +47,7 @@
         <style>
             img {
                 border: 4px solid #000;
-                border-collapse: separate;
-                border-spacing: 4px;
+                margin: 0px 2px;
             }
             .content {
                 max-width: 1450px;
