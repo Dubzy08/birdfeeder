@@ -130,8 +130,8 @@
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
                         echo '<img src=' . $row["Picture"] . ' width="350"';
-                        echo " ";
-                        //echo "<br>";
+                        //echo " ";
+                        echo "<br>";
                         $y++;
                         $id--;
                     };
