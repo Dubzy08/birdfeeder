@@ -123,15 +123,15 @@
                 echo '<h2>Latest Captures of the Feeder</h2>';
 
                 if(mysqli_query($conn,$sql)){
-                    while($id>6&&$y<16){
+                    while($y<16){
                         $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
                         $row = mysqli_fetch_assoc($result);
                         //$image = "image/bird.jpg";
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
                         echo '<img src=' . $row["Picture"] . ' width="350"';
-                        echo " ";
-                        echo "<br>";
+                        //echo " ";
+                        //echo "<br>";
                         $y++;
                         $id--;
                     };
