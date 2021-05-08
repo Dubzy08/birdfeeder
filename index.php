@@ -75,11 +75,12 @@
                 $password = "Password01";
                 $dbname = "birdfeeder";
                 //for database information
-                $year = date("Y");
-                $month = date("m");
-                $day = date("d");
-                $hour = date("H");
-                $minute = date("i");
+                //$year = date("Y");
+                //$month = date("m");
+                //$day = date("d");
+                //$hour = date("H");
+                //$minute = date("i");
+
                 //other variables
                 $y = 0;
 
@@ -91,15 +92,15 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
 
-                //get the last row ID from climat table
-                $sql = "SELECT MAX(ID) AS last_climat FROM climat";
+                //get the last row ID from climate table
+                $sql = "SELECT MAX(ID) AS last_climate FROM climate";
                 $result = mysqli_query($conn, $sql);
                 $row = mysqli_fetch_array($result);
-                $id = $row["last_climat"];
+                $id = $row["last_climate"];
 
                 //getting information associated to that ID
-                //echo "<br> The last ID of the climat table is: " . $id;
-                $result = mysqli_query($conn, "SELECT * FROM climat where ID=$id");
+                //echo "<br> The last ID of the climate table is: " . $id;
+                $result = mysqli_query($conn, "SELECT * FROM climate where ID=$id");
                 $row = mysqli_fetch_assoc($result);
 
                 echo "<br><br> Temperature: " . $row["Temp"] . "°C";
