@@ -80,8 +80,7 @@
         ?>
         </div>
 
-        <!--<div><img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
-        -->
+        
         <div class = "content">
             <?php
                 //define variables
