@@ -74,7 +74,7 @@
                 echo '<img id="mjpeg_dest" getLoadClass() . getImgWidth(); src="./loading.jpg">';
             }
             else{
-                echo '<img src="unavailable.jpg" alt="Cannot show stream" width="450" />';
+                echo '<img src="unavailable.jpg" alt="Cannot show stream" width="550" />';
                 echo "<br> It is nigth time <br>";
             }
         ?>
