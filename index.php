@@ -74,7 +74,7 @@
             }
             else{
                 echo '<img src="unavailable.jpg" alt="Cannot show stream" width="550" />';
-                echo "<br> Unfortunately, there is not live video during night time!";
+                echo "<br> Unfortunately, there is no live video during night time!";
             }
         ?>
         </div>
