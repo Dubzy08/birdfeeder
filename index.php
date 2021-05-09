@@ -61,28 +61,25 @@
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
         
-        <!--<div class = "center">
+        <div class = "center">
             <h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>
-        </div>-->
+        </div>
         <div class = "center">
         <?php
             //Read value from gpio.1 pin
             $light = 'gpio read 1';
             
-
             if (($light) == 1){
-                echo "<h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>";
+                echo "<br> It is daytime <br>";
             }
             else{
-                echo "<div class = "img">";
-                echo "Live video off during night time!";
-                echo "</div>";
+                echo "<br> It is nigth time <br>";
             }
         ?>
         </div>
 
-        <div><img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
-        
+        <!--<div><img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
+        -->
         <div class = "content">
             <?php
                 //define variables
