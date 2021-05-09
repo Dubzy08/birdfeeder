@@ -64,11 +64,11 @@
         <!--<div class = "center">
             <h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>
         </div>-->
-        
+        <div class = "center">
         <?php
             //Read value from gpio.1 pin
             $light = 'gpio read 1';
-            echo "<div class = "center">";
+            
 
             if (($light) == 1){
                 echo "<h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>";
@@ -78,9 +78,9 @@
                 echo "Live video off during night time!";
                 echo "</div>";
             }
-
-            echo "</div>";
         ?>
+        </div>
+
         <div><img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
         
         <div class = "content">
