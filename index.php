@@ -60,12 +60,29 @@
 
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
-        <div class = "center">
+        
+        <!--<div class = "center">
             <h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>
-            
-            <div>
-                <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
-        </div>
+        </div>-->
+        
+        <?php
+            //Read value from gpio.1 pin
+            $light = 'gpio read 1';
+            echo "<div class = "center">";
+
+            if (($light) == 1){
+                echo "<h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>";
+            }
+            else{
+                echo "<div class = "img">";
+                echo "Live video off during night time!";
+                echo "</div>";
+            }
+
+            echo "</div>";
+        ?>
+        <div><img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
+        
         <div class = "content">
             <?php
                 //define variables
@@ -130,7 +147,6 @@
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
                         echo '<img src=' . $row["Picture"] . ' width="350"';
-                        //echo " ";
                         echo "<br>";
                         $y++;
                         $id--;
