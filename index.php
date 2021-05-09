@@ -60,24 +60,11 @@
 
     </head>
     <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
-        
         <div class = "center">
             <h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>
-        </div>
-        <div class = "center">
-        <?php/*
-            //Read value from gpio.1 pin
-            $light = `gpio read 1`;
-
-            if (($light) == 1){
-                echo "<br> It is daytime <br>";
-                echo '<img id="mjpeg_dest" getLoadClass() . getImgWidth(); src="./loading.jpg">';
-            }
-            else{
-                echo '<img src="unavailable.jpg" alt="Cannot show stream" width="550" />';
-                echo "<br> It is nigth time <br>";
-            }*/
-        ?>
+            
+            <div>
+                <img id="mjpeg_dest" <?php echo getLoadClass() . getImgWidth();?> src="./loading.jpg"></div>
         </div>
 
         
