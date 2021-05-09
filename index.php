@@ -67,7 +67,7 @@
         <div class = "center">
         <?php
             //Read value from gpio.1 pin
-            $light = `gpio read 1`;
+            /*$light = `gpio read 1`;
 
             if (($light) == 1){
                 echo "<br> It is daytime <br>";
@@ -76,7 +76,7 @@
             else{
                 echo '<img src="unavailable.jpg" alt="Cannot show stream" width="550" />';
                 echo "<br> It is nigth time <br>";
-            }
+            }*/
         ?>
         </div>
 
