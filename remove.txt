@@ -1,0 +1,70 @@
++++ readlink -f ./start.sh
+++ dirname /var/www/html/birdfeeder/start.sh
++ cd /var/www/html/birdfeeder
++ color_red='tput setaf 1'
++ color_green='tput setaf 2'
++ color_reset='tput sgr0'
++ source ./config.txt
+++ rpicamdir=html/site
+++ webserver=apache
+++ webport=80
+++ user=
+++ webpasswd=
+++ autostart=yes
+++ jpglink=no
+++ phpversion=7.3
+++ DEBUG=no
+++ RPICAMDIR=
+++ AUTOSTART=yes
+++ security=no
+++ user=
+++ passwd=
+++ WEBPORT=80
++ fn_stop
++ sudo killall raspimjpeg
++ sudo killall php
++ sudo killall motion
++ sudo service apache2 stop
++ sudo service nginx stop
++ sudo service lighttpd stop
++ dialog --title 'Stop message' --infobox Stopped. 4 16
++ sleep 2
++ dialog --title 'Uninstall packages!' --backtitle '' --yesno 'Do You want uninstall webserver and php packages also?' 6 35
++ response=1
++ case $response in
++ package=('zip' 'gpac motion' 'libav-tools')
++ for i in "${package[@]}"
+++ dpkg-query -W '-f=${Status}' zip
+++ grep -c 'ok installed'
++ '[' 0 -eq 1 ']'
++ for i in "${package[@]}"
+++ dpkg-query -W '-f=${Status}' 'gpac motion'
+++ grep -c 'ok installed'
++ '[' 0 -eq 1 ']'
++ for i in "${package[@]}"
+++ dpkg-query -W '-f=${Status}' libav-tools
+++ grep -c 'ok installed'
++ '[' 0 -eq 1 ']'
++ sudo apt-get autoremove -y
++ '[' '!' -d /root/media ']'
++ '[' '!' html/site == '' ']'
++ sudo mv /var/www/html/site/media /root/media
++ sudo rm -r /var/www/html/site
++ sudo rm /etc/sudoers.d/RPI_Cam_Web_Interface
++ sudo rm /usr/bin/raspimjpeg
++ sudo rm /etc/raspimjpeg
++ fn_autostart_disable
+++ mktemp
++ tmpfile=/tmp/tmp.VHDzDCXmkg
++ sudo sed /#START/,/#END/d /etc/rc.local
++ sudo mv /tmp/tmp.VHDzDCXmkg /etc/rc.local
++ sudo awk '!NF {if (++n <= 1) print; next}; {n=0;print}' /etc/rc.local
++ sudo mv /tmp/tmp.VHDzDCXmkg /etc/rc.local
++ sudo chown root:root /etc/rc.local
++ sudo chmod 755 /etc/rc.local
++ sudo chmod 664 ./config.txt
++ sudo mv 'etc/nginx/sites-available/*default*' /etc/nginx/sites-available
++ sudo mv 'etc/apache2/sites-available/*default*' /etc/apache2/sites-available
+++ dpkg-query -W '-f=${Status}' apache2
+++ grep -c 'ok installed'
++ '[' 0 -eq 1 ']'
