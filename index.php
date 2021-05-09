@@ -68,10 +68,11 @@
         <?php
             //Read value from gpio.1 pin
             $light = `gpio read 1`;
-            
-            echo "<br>" . $light . "<br>";
+
             if (($light) == 1){
                 echo "<br> It is daytime <br>";
+                echo '<img id="mjpeg_dest"';
+                echo 'getLoadClass() . getImgWidth(); src="./loading.jpg">';
             }
             else{
                 echo "<br> It is nigth time <br>";
