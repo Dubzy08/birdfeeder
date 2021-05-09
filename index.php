@@ -68,7 +68,7 @@
         <?php
             //Read value from gpio.1 pin
             $light = 'gpio read 1';
-            
+            echo "<br>" . $light . "<br>";
             if (($light) == 1){
                 echo "<br> It is daytime <br>";
             }
