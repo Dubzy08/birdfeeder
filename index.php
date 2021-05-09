@@ -71,8 +71,7 @@
 
             if (($light) == 1){
                 echo "<br> It is daytime <br>";
-                echo '<img id="mjpeg_dest"';
-                echo 'getLoadClass() . getImgWidth(); src="./loading.jpg">';
+                echo '<img id="mjpeg_dest" getLoadClass() . getImgWidth(); src="./loading.jpg">';
             }
             else{
                 echo "<br> It is nigth time <br>";
