@@ -70,12 +70,11 @@
             $light = `gpio read 1`;
 
             if (($light) == 1){
-                echo "<br> It is daytime <br>";
                 echo '<img id="mjpeg_dest" getLoadClass() . getImgWidth(); src="./loading.jpg">';
             }
             else{
                 echo '<img src="unavailable.jpg" alt="Cannot show stream" width="550" />';
-                echo "<br> It is nigth time <br>";
+                echo "<br> Unfortunately, there is not live video during night time!";
             }
         ?>
         </div>
