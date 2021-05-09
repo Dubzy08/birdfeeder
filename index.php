@@ -65,7 +65,7 @@
             <h1 style="font-size:50px;">Bird Feeder Live Monitor</h1>
         </div>
         <div class = "center">
-        <?php/*
+        <?php
             //Read value from gpio.1 pin
             $light = `gpio read 1`;
 
@@ -76,7 +76,7 @@
             else{
                 echo '<img src="unavailable.jpg" alt="Cannot show stream" width="550" />';
                 echo "<br> It is nigth time <br>";
-            }*/
+            }
         ?>
         </div>
 
