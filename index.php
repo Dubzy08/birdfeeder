@@ -140,10 +140,12 @@
                     while($y<16){
                         $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
                         $row = mysqli_fetch_assoc($result);
+                        $picture = $row["Picture"];
+                        echo "<br>" . $picture . "<br>";
                         //$image = "image/bird.jpg";
                         //if($image)
                         //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
-                        echo '<img src=' . $row["Picture"] . ' width="350"';
+                        echo '<img src=' . $picture . ' width="350"';
                         echo "<br>";
                         $y++;
                         $id--;
