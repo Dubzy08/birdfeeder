@@ -146,7 +146,6 @@
                         if (file_exists($picture)){
                             echo '<img src=' . $picture . ' width="350"';
                             echo "<br>";
-                            echo $picture;
                             $y++;
                         }
                         $id--;
