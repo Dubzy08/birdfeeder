@@ -137,18 +137,17 @@
                 echo '<h2>Latest Captures of the Feeder</h2>';
 
                 if(mysqli_query($conn,$sql)){
-                    while($y<16){
+                    while($y<16&&$id>0){
                         $result = mysqli_query($conn, "SELECT ID, Picture from birds where ID=$id");
                         $row = mysqli_fetch_assoc($result);
                         $picture = $row["Picture"];
-                        $question = file_exists($picture);
-                        echo $question;
-                        //$image = "image/bird.jpg";
-                        //if($image)
-                        //echo "<br><br>Image file is:" . $row["Picture"] . "<br><br>";
-                        echo '<img src=' . $picture . ' width="350"';
-                        echo "<br>";
-                        $y++;
+
+                        //display the picture only if it exists
+                        if (file_exists($picture)){
+                            echo '<img src=' . $picture . ' width="350"';
+                            echo "<br>";
+                            $y++;
+                        }
                         $id--;
                     };
                 }
